@@ -18,7 +18,7 @@ export const CardShopping = (pokemon) => {
 
         <Stack w='100%'>
             <CardBody>
-                <Heading size='md' p={2}>The perfect latte</Heading>
+                <Heading size='md' p={2}>{'pokemon.name.english'}</Heading>
 
                 <Box display={"grid"} gridTemplateColumns={"1fr 1fr"} gap={2} p={2} mt={3} >
                     <Tag variant="solid" colorScheme="teal" fontSize='18px' py={2}>
