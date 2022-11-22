@@ -89,14 +89,4 @@ export const pokemonTypes = [
     image:
       "https://archives.bulbagarden.net/media/upload/c/c6/Fairy_icon_SwSh.png",
   },
-  {
-    name: "unknown",
-    image:
-      "https://archives.bulbagarden.net/media/upload/9/95/Normal_icon_SwSh.png",
-  },
-  {
-    name: "shadow",
-    image:
-      "https://archives.bulbagarden.net/media/upload/b/b5/Ghost_icon_LA.png",
-  },
 ];

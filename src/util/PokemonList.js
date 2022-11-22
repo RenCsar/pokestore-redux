@@ -2869,4 +2869,20 @@ export const pokemon = [
       Speed: 100,
     },
   },
+  {
+    id: 197,
+    price: 1450.35,
+    name: {
+      english: "Umbreon",
+    },
+    type: ["Dark"],
+    base: {
+      HP: 95,
+      Attack: 65,
+      Defense: 110,
+      "Sp. Attack": 60,
+      "Sp. Defense": 130,
+      Speed: 65,
+    },
+  },
 ];
