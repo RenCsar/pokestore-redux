@@ -14,7 +14,13 @@ export const Categoria = () => {
   });
 
   return (
-    <Box display={"flex"} flexWrap={"wrap"} justifyContent="center" gap={3} py={10}>
+    <Box
+      display={"flex"}
+      flexWrap={"wrap"}
+      justifyContent="center"
+      gap={3}
+      py={10}
+    >
       {filteredPokemon.map((pokemon) => {
         return <CardPokemon key={pokemon.id} pokemon={pokemon} />;
       })}

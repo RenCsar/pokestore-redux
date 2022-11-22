@@ -5,27 +5,31 @@ import { Header } from "../components/header";
 import { Carrinho } from "../pages/Carrinho";
 import { Categoria } from "../pages/Categoria";
 import { Home } from "../pages/Home";
+import { Provider } from "react-redux";
+import { store } from "../store";
 
 function Router() {
   return (
     <BrowserRouter>
-      <ChakraProvider>
-        <Box
-          bg="gray.50"
-          display="flex"
-          flexDir="column"
-          justifyContent="space-between"
-          minH="100vh"
-        >
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/carrinho" element={<Carrinho />} />
-            <Route path="/categoria/:tipo" element={<Categoria />} />
-          </Routes>
-          <Footer />
-        </Box>
-      </ChakraProvider>
+      <Provider store={store}>
+        <ChakraProvider>
+          <Box
+            bg="gray.50"
+            display="flex"
+            flexDir="column"
+            justifyContent="space-between"
+            minH="100vh"
+          >
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/carrinho" element={<Carrinho />} />
+              <Route path="/categoria/:tipo" element={<Categoria />} />
+            </Routes>
+            <Footer />
+          </Box>
+        </ChakraProvider>
+      </Provider>
     </BrowserRouter>
   );
 }
