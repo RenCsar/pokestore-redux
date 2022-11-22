@@ -1,5 +1,6 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { Carrinho } from "../pages/Carrinho";
 import { Home } from "../pages/Home";
@@ -8,11 +9,14 @@ function Router() {
   return (
     <BrowserRouter>
       <ChakraProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/carrinho" element={<Carrinho />} />
-        </Routes>
+        <Box bg="gray.50" display="flex" flexDir="column" justifyContent="space-between" minH="100vh">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/carrinho" element={<Carrinho />} />
+          </Routes>
+          <Footer />
+        </Box>
       </ChakraProvider>
     </BrowserRouter>
   );

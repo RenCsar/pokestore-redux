@@ -75,9 +75,9 @@ export const pokemonTypes = [
       "https://archives.bulbagarden.net/media/upload/1/15/Ice_icon_SwSh.png",
   },
   {
-    name: "dragon",
+    name: "Dragon",
     image:
-      "https://archives.bulbagarden.net/media/upload/7/70/Dragon_icon_SwSh.png",
+      "https://archives.bulbagarden.net/media/upload/2/28/Dragon_icon_LA.png",
   },
   {
     name: "dark",

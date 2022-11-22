@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 export const Header = () => {
   return (
     <Box w="100%" bg="gray.100">
+
       <Container
         display="flex"
         alignItems="center"
@@ -30,7 +31,7 @@ export const Header = () => {
             <Input borderColor="var(--chakra-colors-telegram-500)" type="search" placeholder="Pesquisar" />
           </InputGroup>
           <Link to={'/carrinho'}>
-            <Button colorScheme="telegram"> 
+            <Button colorScheme="telegram">
               <AiOutlineShoppingCart size={32} />
             </Button>
           </Link>

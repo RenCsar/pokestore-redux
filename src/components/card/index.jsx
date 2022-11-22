@@ -1,20 +1,43 @@
-import { Box, Center, Image, Text } from '@chakra-ui/react'
-import React from 'react';
-import { Link } from 'react-router-dom';
-import bgCard from '../../assets/bg-card.png'
+import { Box, Center, Image, Text } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
+import bgCard from "../../assets/bg-card.png";
 
-
-export const Card = ({image, type, to="/"}) => {
+export const Card = ({ image, type, to = "/" }) => {
   return (
     <>
       <Link to={to}>
-        <Box h={'200px'} w={'180px'}  display={'flex'} justifyContent={'center'} alignContent={'center'} flexDirection={'column'} borderRadius={'5px'} bgImage={bgCard}>
-            <Center>
-                <Image src={image} w={'100px'} h={'100px'}/>
-            </Center>    
-            <Text textAlign={'center'} color={'white'}>{type}</Text>
+        <Box
+          h={"200px"}
+          w={"180px"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignContent={"center"}
+          flexDirection={"column"}
+          borderRadius={10}
+          bgImage={bgCard}
+          boxShadow='xl'
+        >
+          <Center>
+            <Image
+              borderRadius={"50%"}
+              border="2px solid white"
+              src={image}
+              w={"100px"}
+              h={"100px"}
+            />
+          </Center>
+          <Text
+            textAlign={"center"}
+            color={"white"}
+            fontSize="2xl"
+            textTransform="capitalize"
+            mt={2}
+          >
+            {type}
+          </Text>
         </Box>
       </Link>
     </>
-  )
-}
+  );
+};

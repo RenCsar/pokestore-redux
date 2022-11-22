@@ -2,16 +2,34 @@ import React from "react";
 import { Box, Container } from "@chakra-ui/react";
 import { Banner } from "../../components/banner";
 import { Card } from "../../components/card";
+import { pokemonTypes } from "../../util/PokemonTypes";
 
 export const Home = () => {
   return (
-    <Box bg="gray.50" minH="100vh">
+    <Box>
       <Banner />
-      <Container maxW="1280px">
-          <Box display={'grid'} gridTemplateColumns={'repeat(auto-fit, minmax(170px, 1fr))'} gap={2} placeItems={'center'} p={3} my={5}>
-            <Card type={'water'} image={"https://archives.bulbagarden.net/media/upload/9/95/Normal_icon_SwSh.png"} to={'/categoria/water'}/>
-          </Box>
-        </Container>
+      <Container maxW="1100px">
+        <Box
+          display={"flex"}
+          flexWrap="wrap"
+          gap={2}
+          justifyContent="center"
+          alignItems="center"
+          p={3}
+          my={5}
+        >
+          {pokemonTypes.map((type) => {
+            return (
+              <Card
+              key={type.name}
+                type={type.name}
+                image={type.image}
+                to={`/categoria/${type.name}`}
+              />
+            );
+          })}
+        </Box>
+      </Container>
     </Box>
   );
 };
