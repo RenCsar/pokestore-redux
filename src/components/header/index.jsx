@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Input, Image, Container, Button, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import pokeStoreLogo from "../../assets/pokestore-logo.png";
+import {Link} from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -12,12 +13,14 @@ export const Header = () => {
         maxW="1280px"
         justifyContent="space-between"
       >
-        <Image
-          w={140}
-          objectFit="cover"
-          src={pokeStoreLogo}
-          alt="Logo PokeStore escrito PokeStore"
-        />
+        <Link to="/">
+          <Image
+            w={140}
+            objectFit="cover"
+            src={pokeStoreLogo}
+            alt="Logo PokeStore escrito PokeStore"
+          />
+        </Link>
         <Box display="flex" gap={2}>
           <InputGroup>
             <InputLeftElement
@@ -26,9 +29,11 @@ export const Header = () => {
             />
             <Input borderColor="var(--chakra-colors-telegram-500)" type="search" placeholder="Pesquisar" />
           </InputGroup>
-          <Button colorScheme="telegram">
-            <AiOutlineShoppingCart size={32} />
-          </Button>
+          <Link to={'/carrinho'}>
+            <Button colorScheme="telegram"> 
+              <AiOutlineShoppingCart size={32} />
+            </Button>
+          </Link>
         </Box>
       </Container>
     </Box>
