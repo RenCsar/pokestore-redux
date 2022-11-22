@@ -6,7 +6,7 @@ import { pokemonTypes } from "../../util/PokemonTypes";
 import { useSelector } from "react-redux";
 
 export const Home = () => {
-  const pokeType = useSelector((state) => state.category);
+  const categories = useSelector((state) => state.category);
 
   return (
     <Box>
@@ -21,13 +21,13 @@ export const Home = () => {
           p={3}
           my={5}
         >
-          {pokeType.map((type) => {
+          {categories.map((category) => {
             return (
               <Card
-              key={type.name}
-                type={type.name}
-                image={type.image}
-                to={`/categoria/${type.name}`}
+              key={category.name}
+                type={category.name}
+                image={category.image}
+                to={`/categoria/${category.name}`}
               />
             );
           })}

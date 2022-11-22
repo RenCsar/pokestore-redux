@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Image, Tag, Text } from "@chakra-ui/react";
 import { linkImagem } from "../../util/PokemonList";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdAddShoppingCart } from "react-icons/md";
 import { bounce } from "../../styled.emotion";
 
-export const CardPokemon = ({ pokemon }) => {
+export const CardPokemon = ({ pokemon, onClick }) => {
   return (
     <div>
       <Box
@@ -29,7 +29,7 @@ export const CardPokemon = ({ pokemon }) => {
         >
           {pokemon.name.english}
         </Tag>
-        <Image src={`${linkImagem}/${pokemon.id}.png`}/>
+        <Image src={`${linkImagem}/${pokemon.id}.png`} />
         <Box display={"grid"} gridTemplateColumns={"1fr 1fr"} gap={1} p={2}>
           <Tag variant="solid" colorScheme="teal">
             <strong>HP</strong>: {pokemon.base.HP}
@@ -58,7 +58,11 @@ export const CardPokemon = ({ pokemon }) => {
           justifyContent={"space-between"}
           p={2}
         >
-          <AiOutlineHeart size={22} fill={"red"} />
+          {pokemon.favorito ? (
+            <AiFillHeart cursor="pointer" size={22} fill={"red"} onClick={onClick} />
+          ) : (
+            <AiOutlineHeart cursor="pointer" size={22} fill={"red"} onClick={onClick} />
+          )}
           <Tag variant="solid" colorScheme="telegram" py={2}>
             <Text>
               <strong>R$</strong> {pokemon.price}
