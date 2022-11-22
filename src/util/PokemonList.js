@@ -1,7 +1,8 @@
-export const linkImagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/35.png`;
+export const linkImagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home`;
 export const pokemon = [
   {
     id: 1,
+    price: 150.35,
     name: {
       english: "Bulbasaur",
       japanese: "フシギダネ",
@@ -20,6 +21,7 @@ export const pokemon = [
   },
   {
     id: 2,
+    price: 150.35,
     name: {
       english: "Ivysaur",
       japanese: "フシギソウ",
@@ -38,6 +40,7 @@ export const pokemon = [
   },
   {
     id: 3,
+    price: 150.35,
     name: {
       english: "Venusaur",
       japanese: "フシギバナ",
@@ -56,6 +59,7 @@ export const pokemon = [
   },
   {
     id: 4,
+    price: 150.35,
     name: {
       english: "Charmander",
       japanese: "ヒトカゲ",
@@ -74,6 +78,7 @@ export const pokemon = [
   },
   {
     id: 5,
+    price: 150.35,
     name: {
       english: "Charmeleon",
       japanese: "リザード",
@@ -92,6 +97,7 @@ export const pokemon = [
   },
   {
     id: 6,
+    price: 150.35,
     name: {
       english: "Charizard",
       japanese: "リザードン",
@@ -110,6 +116,7 @@ export const pokemon = [
   },
   {
     id: 7,
+    price: 150.35,
     name: {
       english: "Squirtle",
       japanese: "ゼニガメ",
@@ -128,6 +135,7 @@ export const pokemon = [
   },
   {
     id: 8,
+    price: 150.35,
     name: {
       english: "Wartortle",
       japanese: "カメール",
@@ -146,6 +154,7 @@ export const pokemon = [
   },
   {
     id: 9,
+    price: 150.35,
     name: {
       english: "Blastoise",
       japanese: "カメックス",
@@ -164,6 +173,7 @@ export const pokemon = [
   },
   {
     id: 10,
+    price: 150.35,
     name: {
       english: "Caterpie",
       japanese: "キャタピー",
@@ -182,6 +192,7 @@ export const pokemon = [
   },
   {
     id: 11,
+    price: 150.35,
     name: {
       english: "Metapod",
       japanese: "トランセル",
@@ -200,6 +211,7 @@ export const pokemon = [
   },
   {
     id: 12,
+    price: 150.35,
     name: {
       english: "Butterfree",
       japanese: "バタフリー",
@@ -218,6 +230,7 @@ export const pokemon = [
   },
   {
     id: 13,
+    price: 150.35,
     name: {
       english: "Weedle",
       japanese: "ビードル",
@@ -236,6 +249,7 @@ export const pokemon = [
   },
   {
     id: 14,
+    price: 150.35,
     name: {
       english: "Kakuna",
       japanese: "コクーン",
@@ -254,6 +268,7 @@ export const pokemon = [
   },
   {
     id: 15,
+    price: 150.35,
     name: {
       english: "Beedrill",
       japanese: "スピアー",
@@ -272,6 +287,7 @@ export const pokemon = [
   },
   {
     id: 16,
+    price: 150.35,
     name: {
       english: "Pidgey",
       japanese: "ポッポ",
@@ -290,6 +306,7 @@ export const pokemon = [
   },
   {
     id: 17,
+    price: 150.35,
     name: {
       english: "Pidgeotto",
       japanese: "ピジョン",
@@ -308,6 +325,7 @@ export const pokemon = [
   },
   {
     id: 18,
+    price: 150.35,
     name: {
       english: "Pidgeot",
       japanese: "ピジョット",
@@ -326,6 +344,7 @@ export const pokemon = [
   },
   {
     id: 19,
+    price: 150.35,
     name: {
       english: "Rattata",
       japanese: "コラッタ",
@@ -344,6 +363,7 @@ export const pokemon = [
   },
   {
     id: 20,
+    price: 150.35,
     name: {
       english: "Raticate",
       japanese: "ラッタ",
@@ -362,6 +382,7 @@ export const pokemon = [
   },
   {
     id: 21,
+    price: 150.35,
     name: {
       english: "Spearow",
       japanese: "オニスズメ",
@@ -380,6 +401,7 @@ export const pokemon = [
   },
   {
     id: 22,
+    price: 150.35,
     name: {
       english: "Fearow",
       japanese: "オニドリル",
@@ -398,6 +420,7 @@ export const pokemon = [
   },
   {
     id: 23,
+    price: 150.35,
     name: {
       english: "Ekans",
       japanese: "アーボ",
@@ -416,6 +439,7 @@ export const pokemon = [
   },
   {
     id: 24,
+    price: 150.35,
     name: {
       english: "Arbok",
       japanese: "アーボック",
@@ -434,6 +458,7 @@ export const pokemon = [
   },
   {
     id: 25,
+    price: 150.35,
     name: {
       english: "Pikachu",
       japanese: "ピカチュウ",
@@ -452,6 +477,7 @@ export const pokemon = [
   },
   {
     id: 26,
+    price: 150.35,
     name: {
       english: "Raichu",
       japanese: "ライチュウ",
@@ -470,6 +496,7 @@ export const pokemon = [
   },
   {
     id: 27,
+    price: 150.35,
     name: {
       english: "Sandshrew",
       japanese: "サンド",
@@ -488,6 +515,7 @@ export const pokemon = [
   },
   {
     id: 28,
+    price: 150.35,
     name: {
       english: "Sandslash",
       japanese: "サンドパン",
@@ -506,6 +534,7 @@ export const pokemon = [
   },
   {
     id: 29,
+    price: 150.35,
     name: {
       english: "Nidoran♀",
       japanese: "ニドラン♀",
@@ -524,6 +553,7 @@ export const pokemon = [
   },
   {
     id: 30,
+    price: 150.35,
     name: {
       english: "Nidorina",
       japanese: "ニドリーナ",
@@ -542,6 +572,7 @@ export const pokemon = [
   },
   {
     id: 31,
+    price: 150.35,
     name: {
       english: "Nidoqueen",
       japanese: "ニドクイン",
@@ -560,6 +591,7 @@ export const pokemon = [
   },
   {
     id: 32,
+    price: 150.35,
     name: {
       english: "Nidoran♂",
       japanese: "ニドラン♂",
@@ -578,6 +610,7 @@ export const pokemon = [
   },
   {
     id: 33,
+    price: 150.35,
     name: {
       english: "Nidorino",
       japanese: "ニドリーノ",
@@ -596,6 +629,7 @@ export const pokemon = [
   },
   {
     id: 34,
+    price: 150.35,
     name: {
       english: "Nidoking",
       japanese: "ニドキング",
@@ -614,6 +648,7 @@ export const pokemon = [
   },
   {
     id: 35,
+    price: 150.35,
     name: {
       english: "Clefairy",
       japanese: "ピッピ",
@@ -632,6 +667,7 @@ export const pokemon = [
   },
   {
     id: 36,
+    price: 150.35,
     name: {
       english: "Clefable",
       japanese: "ピクシー",
@@ -650,6 +686,7 @@ export const pokemon = [
   },
   {
     id: 37,
+    price: 150.35,
     name: {
       english: "Vulpix",
       japanese: "ロコン",
@@ -668,6 +705,7 @@ export const pokemon = [
   },
   {
     id: 38,
+    price: 150.35,
     name: {
       english: "Ninetales",
       japanese: "キュウコン",
@@ -686,6 +724,7 @@ export const pokemon = [
   },
   {
     id: 39,
+    price: 150.35,
     name: {
       english: "Jigglypuff",
       japanese: "プリン",
@@ -704,6 +743,7 @@ export const pokemon = [
   },
   {
     id: 40,
+    price: 150.35,
     name: {
       english: "Wigglytuff",
       japanese: "プクリン",
@@ -722,6 +762,7 @@ export const pokemon = [
   },
   {
     id: 41,
+    price: 150.35,
     name: {
       english: "Zubat",
       japanese: "ズバット",
@@ -740,6 +781,7 @@ export const pokemon = [
   },
   {
     id: 42,
+    price: 150.35,
     name: {
       english: "Golbat",
       japanese: "ゴルバット",
@@ -758,6 +800,7 @@ export const pokemon = [
   },
   {
     id: 43,
+    price: 150.35,
     name: {
       english: "Oddish",
       japanese: "ナゾノクサ",
@@ -776,6 +819,7 @@ export const pokemon = [
   },
   {
     id: 44,
+    price: 150.35,
     name: {
       english: "Gloom",
       japanese: "クサイハナ",
@@ -794,6 +838,7 @@ export const pokemon = [
   },
   {
     id: 45,
+    price: 150.35,
     name: {
       english: "Vileplume",
       japanese: "ラフレシア",
@@ -812,6 +857,7 @@ export const pokemon = [
   },
   {
     id: 46,
+    price: 150.35,
     name: {
       english: "Paras",
       japanese: "パラス",
@@ -830,6 +876,7 @@ export const pokemon = [
   },
   {
     id: 47,
+    price: 150.35,
     name: {
       english: "Parasect",
       japanese: "パラセクト",
@@ -848,6 +895,7 @@ export const pokemon = [
   },
   {
     id: 48,
+    price: 150.35,
     name: {
       english: "Venonat",
       japanese: "コンパン",
@@ -866,6 +914,7 @@ export const pokemon = [
   },
   {
     id: 49,
+    price: 150.35,
     name: {
       english: "Venomoth",
       japanese: "モルフォン",
@@ -884,6 +933,7 @@ export const pokemon = [
   },
   {
     id: 50,
+    price: 150.35,
     name: {
       english: "Diglett",
       japanese: "ディグダ",
@@ -902,6 +952,7 @@ export const pokemon = [
   },
   {
     id: 51,
+    price: 150.35,
     name: {
       english: "Dugtrio",
       japanese: "ダグトリオ",
@@ -920,6 +971,7 @@ export const pokemon = [
   },
   {
     id: 52,
+    price: 150.35,
     name: {
       english: "Meowth",
       japanese: "ニャース",
@@ -938,6 +990,7 @@ export const pokemon = [
   },
   {
     id: 53,
+    price: 150.35,
     name: {
       english: "Persian",
       japanese: "ペルシアン",
@@ -956,6 +1009,7 @@ export const pokemon = [
   },
   {
     id: 54,
+    price: 150.35,
     name: {
       english: "Psyduck",
       japanese: "コダック",
@@ -974,6 +1028,7 @@ export const pokemon = [
   },
   {
     id: 55,
+    price: 150.35,
     name: {
       english: "Golduck",
       japanese: "ゴルダック",
@@ -992,6 +1047,7 @@ export const pokemon = [
   },
   {
     id: 56,
+    price: 150.35,
     name: {
       english: "Mankey",
       japanese: "マンキー",
@@ -1010,6 +1066,7 @@ export const pokemon = [
   },
   {
     id: 57,
+    price: 150.35,
     name: {
       english: "Primeape",
       japanese: "オコリザル",
@@ -1028,6 +1085,7 @@ export const pokemon = [
   },
   {
     id: 58,
+    price: 150.35,
     name: {
       english: "Growlithe",
       japanese: "ガーディ",
@@ -1046,6 +1104,7 @@ export const pokemon = [
   },
   {
     id: 59,
+    price: 150.35,
     name: {
       english: "Arcanine",
       japanese: "ウインディ",
@@ -1064,6 +1123,7 @@ export const pokemon = [
   },
   {
     id: 60,
+    price: 150.35,
     name: {
       english: "Poliwag",
       japanese: "ニョロモ",
@@ -1082,6 +1142,7 @@ export const pokemon = [
   },
   {
     id: 61,
+    price: 150.35,
     name: {
       english: "Poliwhirl",
       japanese: "ニョロゾ",
@@ -1100,6 +1161,7 @@ export const pokemon = [
   },
   {
     id: 62,
+    price: 150.35,
     name: {
       english: "Poliwrath",
       japanese: "ニョロボン",
@@ -1118,6 +1180,7 @@ export const pokemon = [
   },
   {
     id: 63,
+    price: 150.35,
     name: {
       english: "Abra",
       japanese: "ケーシィ",
@@ -1136,6 +1199,7 @@ export const pokemon = [
   },
   {
     id: 64,
+    price: 150.35,
     name: {
       english: "Kadabra",
       japanese: "ユンゲラー",
@@ -1154,6 +1218,7 @@ export const pokemon = [
   },
   {
     id: 65,
+    price: 150.35,
     name: {
       english: "Alakazam",
       japanese: "フーディン",
@@ -1172,6 +1237,7 @@ export const pokemon = [
   },
   {
     id: 66,
+    price: 150.35,
     name: {
       english: "Machop",
       japanese: "ワンリキー",
@@ -1190,6 +1256,7 @@ export const pokemon = [
   },
   {
     id: 67,
+    price: 150.35,
     name: {
       english: "Machoke",
       japanese: "ゴーリキー",
@@ -1208,6 +1275,7 @@ export const pokemon = [
   },
   {
     id: 68,
+    price: 150.35,
     name: {
       english: "Machamp",
       japanese: "カイリキー",
@@ -1226,6 +1294,7 @@ export const pokemon = [
   },
   {
     id: 69,
+    price: 150.35,
     name: {
       english: "Bellsprout",
       japanese: "マダツボミ",
@@ -1244,6 +1313,7 @@ export const pokemon = [
   },
   {
     id: 70,
+    price: 150.35,
     name: {
       english: "Weepinbell",
       japanese: "ウツドン",
@@ -1262,6 +1332,7 @@ export const pokemon = [
   },
   {
     id: 71,
+    price: 150.35,
     name: {
       english: "Victreebel",
       japanese: "ウツボット",
@@ -1280,6 +1351,7 @@ export const pokemon = [
   },
   {
     id: 72,
+    price: 150.35,
     name: {
       english: "Tentacool",
       japanese: "メノクラゲ",
@@ -1298,6 +1370,7 @@ export const pokemon = [
   },
   {
     id: 73,
+    price: 150.35,
     name: {
       english: "Tentacruel",
       japanese: "ドククラゲ",
@@ -1316,6 +1389,7 @@ export const pokemon = [
   },
   {
     id: 74,
+    price: 150.35,
     name: {
       english: "Geodude",
       japanese: "イシツブテ",
@@ -1334,6 +1408,7 @@ export const pokemon = [
   },
   {
     id: 75,
+    price: 150.35,
     name: {
       english: "Graveler",
       japanese: "ゴローン",
@@ -1352,6 +1427,7 @@ export const pokemon = [
   },
   {
     id: 76,
+    price: 150.35,
     name: {
       english: "Golem",
       japanese: "ゴローニャ",
@@ -1370,6 +1446,7 @@ export const pokemon = [
   },
   {
     id: 77,
+    price: 150.35,
     name: {
       english: "Ponyta",
       japanese: "ポニータ",
@@ -1388,6 +1465,7 @@ export const pokemon = [
   },
   {
     id: 78,
+    price: 150.35,
     name: {
       english: "Rapidash",
       japanese: "ギャロップ",
@@ -1406,6 +1484,7 @@ export const pokemon = [
   },
   {
     id: 79,
+    price: 150.35,
     name: {
       english: "Slowpoke",
       japanese: "ヤドン",
@@ -1424,6 +1503,7 @@ export const pokemon = [
   },
   {
     id: 80,
+    price: 150.35,
     name: {
       english: "Slowbro",
       japanese: "ヤドラン",
@@ -1442,6 +1522,7 @@ export const pokemon = [
   },
   {
     id: 81,
+    price: 150.35,
     name: {
       english: "Magnemite",
       japanese: "コイル",
@@ -1460,6 +1541,7 @@ export const pokemon = [
   },
   {
     id: 82,
+    price: 150.35,
     name: {
       english: "Magneton",
       japanese: "レアコイル",
@@ -1478,6 +1560,7 @@ export const pokemon = [
   },
   {
     id: 83,
+    price: 150.35,
     name: {
       english: "Farfetch'd",
       japanese: "カモネギ",
@@ -1496,6 +1579,7 @@ export const pokemon = [
   },
   {
     id: 84,
+    price: 150.35,
     name: {
       english: "Doduo",
       japanese: "ドードー",
@@ -1514,6 +1598,7 @@ export const pokemon = [
   },
   {
     id: 85,
+    price: 150.35,
     name: {
       english: "Dodrio",
       japanese: "ドードリオ",
@@ -1532,6 +1617,7 @@ export const pokemon = [
   },
   {
     id: 86,
+    price: 150.35,
     name: {
       english: "Seel",
       japanese: "パウワウ",
@@ -1550,6 +1636,7 @@ export const pokemon = [
   },
   {
     id: 87,
+    price: 150.35,
     name: {
       english: "Dewgong",
       japanese: "ジュゴン",
@@ -1568,6 +1655,7 @@ export const pokemon = [
   },
   {
     id: 88,
+    price: 150.35,
     name: {
       english: "Grimer",
       japanese: "ベトベター",
@@ -1586,6 +1674,7 @@ export const pokemon = [
   },
   {
     id: 89,
+    price: 150.35,
     name: {
       english: "Muk",
       japanese: "ベトベトン",
@@ -1604,6 +1693,7 @@ export const pokemon = [
   },
   {
     id: 90,
+    price: 150.35,
     name: {
       english: "Shellder",
       japanese: "シェルダー",
@@ -1622,6 +1712,7 @@ export const pokemon = [
   },
   {
     id: 91,
+    price: 150.35,
     name: {
       english: "Cloyster",
       japanese: "パルシェン",
@@ -1640,6 +1731,7 @@ export const pokemon = [
   },
   {
     id: 92,
+    price: 150.35,
     name: {
       english: "Gastly",
       japanese: "ゴース",
@@ -1658,6 +1750,7 @@ export const pokemon = [
   },
   {
     id: 93,
+    price: 150.35,
     name: {
       english: "Haunter",
       japanese: "ゴースト",
@@ -1676,6 +1769,7 @@ export const pokemon = [
   },
   {
     id: 94,
+    price: 150.35,
     name: {
       english: "Gengar",
       japanese: "ゲンガー",
@@ -1694,6 +1788,7 @@ export const pokemon = [
   },
   {
     id: 95,
+    price: 150.35,
     name: {
       english: "Onix",
       japanese: "イワーク",
@@ -1712,6 +1807,7 @@ export const pokemon = [
   },
   {
     id: 96,
+    price: 150.35,
     name: {
       english: "Drowzee",
       japanese: "スリープ",
@@ -1730,6 +1826,7 @@ export const pokemon = [
   },
   {
     id: 97,
+    price: 150.35,
     name: {
       english: "Hypno",
       japanese: "スリーパー",
@@ -1748,6 +1845,7 @@ export const pokemon = [
   },
   {
     id: 98,
+    price: 150.35,
     name: {
       english: "Krabby",
       japanese: "クラブ",
@@ -1766,6 +1864,7 @@ export const pokemon = [
   },
   {
     id: 99,
+    price: 150.35,
     name: {
       english: "Kingler",
       japanese: "キングラー",
@@ -1784,6 +1883,7 @@ export const pokemon = [
   },
   {
     id: 100,
+    price: 150.35,
     name: {
       english: "Voltorb",
       japanese: "ビリリダマ",
@@ -1802,6 +1902,7 @@ export const pokemon = [
   },
   {
     id: 101,
+    price: 150.35,
     name: {
       english: "Electrode",
       japanese: "マルマイン",
@@ -1820,6 +1921,7 @@ export const pokemon = [
   },
   {
     id: 102,
+    price: 150.35,
     name: {
       english: "Exeggcute",
       japanese: "タマタマ",
@@ -1838,6 +1940,7 @@ export const pokemon = [
   },
   {
     id: 103,
+    price: 150.35,
     name: {
       english: "Exeggutor",
       japanese: "ナッシー",
@@ -1856,6 +1959,7 @@ export const pokemon = [
   },
   {
     id: 104,
+    price: 150.35,
     name: {
       english: "Cubone",
       japanese: "カラカラ",
@@ -1874,6 +1978,7 @@ export const pokemon = [
   },
   {
     id: 105,
+    price: 150.35,
     name: {
       english: "Marowak",
       japanese: "ガラガラ",
@@ -1892,6 +1997,7 @@ export const pokemon = [
   },
   {
     id: 106,
+    price: 150.35,
     name: {
       english: "Hitmonlee",
       japanese: "サワムラー",
@@ -1910,6 +2016,7 @@ export const pokemon = [
   },
   {
     id: 107,
+    price: 150.35,
     name: {
       english: "Hitmonchan",
       japanese: "エビワラー",
@@ -1928,6 +2035,7 @@ export const pokemon = [
   },
   {
     id: 108,
+    price: 150.35,
     name: {
       english: "Lickitung",
       japanese: "ベロリンガ",
@@ -1946,6 +2054,7 @@ export const pokemon = [
   },
   {
     id: 109,
+    price: 150.35,
     name: {
       english: "Koffing",
       japanese: "ドガース",
@@ -1964,6 +2073,7 @@ export const pokemon = [
   },
   {
     id: 110,
+    price: 150.35,
     name: {
       english: "Weezing",
       japanese: "マタドガス",
@@ -1982,6 +2092,7 @@ export const pokemon = [
   },
   {
     id: 111,
+    price: 150.35,
     name: {
       english: "Rhyhorn",
       japanese: "サイホーン",
@@ -2000,6 +2111,7 @@ export const pokemon = [
   },
   {
     id: 112,
+    price: 150.35,
     name: {
       english: "Rhydon",
       japanese: "サイドン",
@@ -2018,6 +2130,7 @@ export const pokemon = [
   },
   {
     id: 113,
+    price: 150.35,
     name: {
       english: "Chansey",
       japanese: "ラッキー",
@@ -2036,6 +2149,7 @@ export const pokemon = [
   },
   {
     id: 114,
+    price: 150.35,
     name: {
       english: "Tangela",
       japanese: "モンジャラ",
@@ -2054,6 +2168,7 @@ export const pokemon = [
   },
   {
     id: 115,
+    price: 150.35,
     name: {
       english: "Kangaskhan",
       japanese: "ガルーラ",
@@ -2072,6 +2187,7 @@ export const pokemon = [
   },
   {
     id: 116,
+    price: 150.35,
     name: {
       english: "Horsea",
       japanese: "タッツー",
@@ -2090,6 +2206,7 @@ export const pokemon = [
   },
   {
     id: 117,
+    price: 150.35,
     name: {
       english: "Seadra",
       japanese: "シードラ",
@@ -2108,6 +2225,7 @@ export const pokemon = [
   },
   {
     id: 118,
+    price: 150.35,
     name: {
       english: "Goldeen",
       japanese: "トサキント",
@@ -2126,6 +2244,7 @@ export const pokemon = [
   },
   {
     id: 119,
+    price: 150.35,
     name: {
       english: "Seaking",
       japanese: "アズマオウ",
@@ -2144,6 +2263,7 @@ export const pokemon = [
   },
   {
     id: 120,
+    price: 150.35,
     name: {
       english: "Staryu",
       japanese: "ヒトデマン",
@@ -2162,6 +2282,7 @@ export const pokemon = [
   },
   {
     id: 121,
+    price: 150.35,
     name: {
       english: "Starmie",
       japanese: "スターミー",
@@ -2180,6 +2301,7 @@ export const pokemon = [
   },
   {
     id: 122,
+    price: 150.35,
     name: {
       english: "Mr. Mime",
       japanese: "バリヤード",
@@ -2198,6 +2320,7 @@ export const pokemon = [
   },
   {
     id: 123,
+    price: 150.35,
     name: {
       english: "Scyther",
       japanese: "ストライク",
@@ -2216,6 +2339,7 @@ export const pokemon = [
   },
   {
     id: 124,
+    price: 150.35,
     name: {
       english: "Jynx",
       japanese: "ルージュラ",
@@ -2234,6 +2358,7 @@ export const pokemon = [
   },
   {
     id: 125,
+    price: 150.35,
     name: {
       english: "Electabuzz",
       japanese: "エレブー",
@@ -2252,6 +2377,7 @@ export const pokemon = [
   },
   {
     id: 126,
+    price: 150.35,
     name: {
       english: "Magmar",
       japanese: "ブーバー",
@@ -2270,6 +2396,7 @@ export const pokemon = [
   },
   {
     id: 127,
+    price: 150.35,
     name: {
       english: "Pinsir",
       japanese: "カイロス",
@@ -2288,6 +2415,7 @@ export const pokemon = [
   },
   {
     id: 128,
+    price: 150.35,
     name: {
       english: "Tauros",
       japanese: "ケンタロス",
@@ -2306,6 +2434,7 @@ export const pokemon = [
   },
   {
     id: 129,
+    price: 150.35,
     name: {
       english: "Magikarp",
       japanese: "コイキング",
@@ -2324,6 +2453,7 @@ export const pokemon = [
   },
   {
     id: 130,
+    price: 150.35,
     name: {
       english: "Gyarados",
       japanese: "ギャラドス",
@@ -2342,6 +2472,7 @@ export const pokemon = [
   },
   {
     id: 131,
+    price: 150.35,
     name: {
       english: "Lapras",
       japanese: "ラプラス",
@@ -2360,6 +2491,7 @@ export const pokemon = [
   },
   {
     id: 132,
+    price: 150.35,
     name: {
       english: "Ditto",
       japanese: "メタモン",
@@ -2378,6 +2510,7 @@ export const pokemon = [
   },
   {
     id: 133,
+    price: 150.35,
     name: {
       english: "Eevee",
       japanese: "イーブイ",
@@ -2396,6 +2529,7 @@ export const pokemon = [
   },
   {
     id: 134,
+    price: 150.35,
     name: {
       english: "Vaporeon",
       japanese: "シャワーズ",
@@ -2414,6 +2548,7 @@ export const pokemon = [
   },
   {
     id: 135,
+    price: 150.35,
     name: {
       english: "Jolteon",
       japanese: "サンダース",
@@ -2432,6 +2567,7 @@ export const pokemon = [
   },
   {
     id: 136,
+    price: 150.35,
     name: {
       english: "Flareon",
       japanese: "ブースター",
@@ -2450,6 +2586,7 @@ export const pokemon = [
   },
   {
     id: 137,
+    price: 150.35,
     name: {
       english: "Porygon",
       japanese: "ポリゴン",
@@ -2468,6 +2605,7 @@ export const pokemon = [
   },
   {
     id: 138,
+    price: 150.35,
     name: {
       english: "Omanyte",
       japanese: "オムナイト",
@@ -2486,6 +2624,7 @@ export const pokemon = [
   },
   {
     id: 139,
+    price: 150.35,
     name: {
       english: "Omastar",
       japanese: "オムスター",
@@ -2504,6 +2643,7 @@ export const pokemon = [
   },
   {
     id: 140,
+    price: 150.35,
     name: {
       english: "Kabuto",
       japanese: "カブト",
@@ -2522,6 +2662,7 @@ export const pokemon = [
   },
   {
     id: 141,
+    price: 150.35,
     name: {
       english: "Kabutops",
       japanese: "カブトプス",
@@ -2540,6 +2681,7 @@ export const pokemon = [
   },
   {
     id: 142,
+    price: 150.35,
     name: {
       english: "Aerodactyl",
       japanese: "プテラ",
@@ -2558,6 +2700,7 @@ export const pokemon = [
   },
   {
     id: 143,
+    price: 150.35,
     name: {
       english: "Snorlax",
       japanese: "カビゴン",
@@ -2576,6 +2719,7 @@ export const pokemon = [
   },
   {
     id: 144,
+    price: 150.35,
     name: {
       english: "Articuno",
       japanese: "フリーザー",
@@ -2594,6 +2738,7 @@ export const pokemon = [
   },
   {
     id: 145,
+    price: 150.35,
     name: {
       english: "Zapdos",
       japanese: "サンダー",
@@ -2612,6 +2757,7 @@ export const pokemon = [
   },
   {
     id: 146,
+    price: 150.35,
     name: {
       english: "Moltres",
       japanese: "ファイヤー",
@@ -2630,6 +2776,7 @@ export const pokemon = [
   },
   {
     id: 147,
+    price: 150.35,
     name: {
       english: "Dratini",
       japanese: "ミニリュウ",
@@ -2648,6 +2795,7 @@ export const pokemon = [
   },
   {
     id: 148,
+    price: 150.35,
     name: {
       english: "Dragonair",
       japanese: "ハクリュー",
@@ -2666,6 +2814,7 @@ export const pokemon = [
   },
   {
     id: 149,
+    price: 150.35,
     name: {
       english: "Dragonite",
       japanese: "カイリュー",
@@ -2684,6 +2833,7 @@ export const pokemon = [
   },
   {
     id: 150,
+    price: 150.35,
     name: {
       english: "Mewtwo",
       japanese: "ミュウツー",
@@ -2702,6 +2852,7 @@ export const pokemon = [
   },
   {
     id: 151,
+    price: 150.35,
     name: {
       english: "Mew",
       japanese: "ミュウ",
