@@ -4,10 +4,11 @@ import { linkImagem } from "../../util/PokemonList";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdAddShoppingCart } from "react-icons/md";
 import { bounce } from "../../styled.emotion";
+import Tilt from 'react-parallax-tilt';
 
 export const CardPokemon = ({ pokemon, onClick }) => {
   return (
-    <div>
+    <Tilt>
       <Box
         w={"230px"}
         display={"flex"}
@@ -16,7 +17,7 @@ export const CardPokemon = ({ pokemon, onClick }) => {
         flexDirection={"column"}
         borderRadius={10}
         boxShadow="xl"
-        animation={`${bounce} 2s ease forwards`}
+        animation={`${bounce} .5s ease forwards`}
         opacity={0}
       >
         <Tag
@@ -74,6 +75,6 @@ export const CardPokemon = ({ pokemon, onClick }) => {
           />
         </Box>
       </Box>
-    </div>
+    </Tilt>
   );
 };

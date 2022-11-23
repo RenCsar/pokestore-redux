@@ -2,10 +2,12 @@ import { Box, Center, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import bgCard from "../../assets/bg-card.png";
+import Tilt from 'react-parallax-tilt';
+
 
 export const Card = ({ image, type, to = "/" }) => {
   return (
-    <>
+    <Tilt>
       <Link to={to}>
         <Box
           h={"200px"}
@@ -38,6 +40,6 @@ export const Card = ({ image, type, to = "/" }) => {
           </Text>
         </Box>
       </Link>
-    </>
+    </Tilt>
   );
 };
