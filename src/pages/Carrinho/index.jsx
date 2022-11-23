@@ -1,10 +1,11 @@
 import { Button, Card, CardBody, Container, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { CardShopping } from "../../components/cardShopping";
 
 export const Carrinho = () => {
+
   const cart = useSelector((state) => state.cart);
   const navigate = useNavigate();
 

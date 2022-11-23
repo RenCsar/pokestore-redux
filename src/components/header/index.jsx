@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Input, Image, Container, Button, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
 import pokeStoreLogo from "../../assets/pokestore-logo.png";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 export const Header = () => {
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log('foi')
+  }, [location]);
   return (
     <Box w="100%" bg="gray.100">
 
