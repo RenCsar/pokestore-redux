@@ -1,13 +1,11 @@
 import { Box, Card, CardBody, Text } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { CardPurchase } from '../../components/cardPurchase'
 
 export const Purchase = () => {
-  const {state} = useLocation()
-  const {subtotal, cart} = state
-  console.log(subtotal);
-  console.log(cart);
+  const {state} = useLocation();
+  const {subtotal, cart} = state;
 
   return (
     <Box display='flex' flexDirection='column' px='250px' py="50px">
