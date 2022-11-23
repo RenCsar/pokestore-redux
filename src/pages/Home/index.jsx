@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Container } from "@chakra-ui/react";
 import { Banner } from "../../components/banner";
 import { Card } from "../../components/card";
-import { pokemonTypes } from "../../util/PokemonTypes";
 import { useSelector } from "react-redux";
 
 export const Home = () => {
