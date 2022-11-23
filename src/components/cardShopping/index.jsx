@@ -1,6 +1,5 @@
 import { Box, Tag, Card, CardBody, CardFooter, Heading, Image, Stack, Text, Button } from '@chakra-ui/react';
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 
 export const CardShopping = (pokemon) => {
   return (
@@ -57,12 +56,12 @@ export const CardShopping = (pokemon) => {
                         <strong>R$</strong> {98894}
                         </Text>
                     </Tag>
-                    <Box display='flex' gap={3} alignItems='center'> 
+                    <Box display='flex' gap={3} alignItems='center'>
                         {pokemon.favorito ? (
                             <AiFillHeart cursor="pointer" size={32} fill={"red"} />
                         ) : (
                             <AiOutlineHeart cursor="pointer" size={32} fill={"red"}  />
-                        )}                    
+                        )}
                         <Button colorScheme='telegram'  w='35px' h='35px'>-</Button>
                         <Text>01</Text>
                         <Button colorScheme='telegram'  w='35px' h='35px'>+</Button>
