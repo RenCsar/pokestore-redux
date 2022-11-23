@@ -90,12 +90,11 @@ export const CardShopping = ({ pokemon }) => {
                 <AiOutlineHeart cursor="pointer" size={32} fill={"red"} />
               )}
               <Button
-                colorScheme="telegram"
-                w="35px"
+                colorScheme={pokemon.count == 0 ? `red`: `telegram`}
                 h="35px"
                 onClick={() => dispatch(removePokemonCount(pokemon))}
               >
-                -
+               {pokemon.count == 0 ? `Remover`: `-`}
               </Button>
               <Text>{pokemon.count}</Text>
               <Button

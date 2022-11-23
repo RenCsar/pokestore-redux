@@ -1,10 +1,12 @@
 import { Button, Card, CardBody, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { CardShopping } from "../../components/cardShopping";
 
 export const Carrinho = () => {
   const cart = useSelector((state) => state.cart);
+  const navigate = useNavigate();
 
   const values = cart.map((pokemon) => {
     return pokemon.price * pokemon.count;
@@ -36,6 +38,10 @@ export const Carrinho = () => {
           alignSelf="center"
           justifySelf="flex-end"
           mr="20px"
+          onClick={()=> navigate('/recibo', {state: {
+            subtotal: subtotal,
+            cart: cart
+          }}) }
         >
           Finalizar Compra
         </Button>

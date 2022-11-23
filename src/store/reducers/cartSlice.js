@@ -30,7 +30,7 @@ const cartSlice = createSlice({
       const pokemon = state.find((pokemon) => pokemon.id === payload.id);
       if (pokemon) {
         if (pokemon.count <= 0) {
-          return;
+          return state.filter((pokemon) => pokemon.id !== payload.id);
         } else {
           pokemon.count--;
         }
