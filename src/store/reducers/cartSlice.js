@@ -40,6 +40,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addPokemonToCard, addPokemonCount, removePokemonCount } =
+export const { addPokemonToCard, addPokemonCount, removePokemonCount, resetCart } =
   cartSlice.actions;
 export default cartSlice.reducer;
