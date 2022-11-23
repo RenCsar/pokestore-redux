@@ -8,7 +8,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const CardPokemon = ({ pokemon, onClick }) => {
   return (
-    <Tilt>
+   
       <Box
         w={"230px"}
         display={"flex"}
@@ -30,7 +30,10 @@ export const CardPokemon = ({ pokemon, onClick }) => {
         >
           {pokemon.name.english}
         </Tag>
+        <Tilt>
         <Image src={`${linkImagem}/${pokemon.id}.png`} />
+        
+        </Tilt>
         <Box display={"grid"} gridTemplateColumns={"1fr 1fr"} gap={1} p={2}>
           <Tag variant="solid" colorScheme="teal">
             <strong>HP</strong>: {pokemon.base.HP}
@@ -75,6 +78,6 @@ export const CardPokemon = ({ pokemon, onClick }) => {
           />
         </Box>
       </Box>
-    </Tilt>
+    
   );
 };
