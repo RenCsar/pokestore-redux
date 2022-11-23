@@ -4,7 +4,7 @@
 ## **Rodando o projeto**
 
 - **Copie e clone o projeto através da seguinte URL:**
-    ##### 👉 https://github.com/GustavoScopinho/homework-react-final/tree/main
+    ##### 👉 https://github.com/RenCsar/pokestore-redux.git
 
 
 - **npm i** - instalar dependências;
