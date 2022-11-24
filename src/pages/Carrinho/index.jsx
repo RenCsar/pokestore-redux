@@ -17,9 +17,19 @@ export const Carrinho = () => {
 
   return (
     <Container maxW="1100px" pt={5}>
-      {cart.map((pokemon) => {
+      {cart.length == 0? (
+        <Card
+        direction={{ base: "column", sm: "row" }}
+        overflow="hidden"
+        variant="outline"
+        p={5}
+        display='flex'
+        justifyContent='center'
+      > <Text fontSize='18px'>Nenhum item no carrinho</Text>
+      </Card>
+      ): (cart.map((pokemon) => {
         return <CardShopping key={pokemon.id} pokemon={pokemon} />;
-      })}
+      }))}
       <Card display="grid" my={5} gridTemplateColumns={"1fr 1fr"}>
         <CardBody fontSize="20px">
           <Text>Resumo da compra</Text>
