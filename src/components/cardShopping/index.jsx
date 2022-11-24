@@ -16,10 +16,21 @@ import {
   addPokemonCount,
   removePokemonCount,
 } from "../../store/reducers/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 export const CardShopping = ({ pokemon }) => {
+  const [test, setTeste] = useState(pokemon);
   const dispatch = useDispatch();
+  const pokemonState = useSelector((state) => state.pokemons);
+  const filteredPokemon = pokemonState.filter(
+    (poke) => poke.name.english === pokemon.name.english
+  );
+
+  useEffect(() => {
+    setTeste(filteredPokemon);
+    console.log(test)
+  }, [pokemonState]);
 
   return (
     <Card
@@ -28,7 +39,7 @@ export const CardShopping = ({ pokemon }) => {
       variant="outline"
     >
       <Image
-        objectFit="cover"
+        objectFit="contain"
         maxW={{ base: "100%", sm: "250px" }}
         src={`${linkImagem}/${pokemon.id}.png`}
         alt="Caffe Latte"
@@ -84,17 +95,17 @@ export const CardShopping = ({ pokemon }) => {
               </Text>
             </Tag>
             <Box display="flex" gap={3} alignItems="center">
-              {pokemon.favorito ? (
+              {test[0]?.favorito ? (
                 <AiFillHeart cursor="pointer" size={32} fill={"red"} />
               ) : (
                 <AiOutlineHeart cursor="pointer" size={32} fill={"red"} />
               )}
               <Button
-                colorScheme={pokemon.count == 0 ? `red`: `telegram`}
+                colorScheme={pokemon.count == 0 ? `red` : `telegram`}
                 h="35px"
                 onClick={() => dispatch(removePokemonCount(pokemon))}
               >
-               {pokemon.count == 0 ? `Remover`: `-`}
+                {pokemon.count == 0 ? `Remover` : `-`}
               </Button>
               <Text>{pokemon.count}</Text>
               <Button

@@ -15,31 +15,52 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
-import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import {
+  AiOutlineShoppingCart,
+  AiOutlineSearch,
+  AiOutlineHeart,
+  AiFillHeart,
+} from "react-icons/ai";
 import pokeStoreLogo from "../../assets/pokestore-logo.png";
-import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { linkImagem } from "../../util/PokemonList";
 import { MdAddShoppingCart } from "react-icons/md";
+import { changeFavorite } from "../../store/reducers/pokemonsSlice";
+import { addPokemonToCard } from "../../store/reducers/cartSlice";
 
 export const Header = () => {
   const location = useLocation();
   const pokemons = useSelector((state) => state.pokemons);
-  const [searchValue, setSearchValue] = useState();
-  const [pokemonFilter, setPokemonFilter] = useState('');
+  const [searchValue, setSearchValue] = useState("");
+  const [pokemonFilter, setPokemonFilter] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const handleChange = (e) => {
-    setSearchValue(e.target.value);
+  const result = pokemons.filter((pokemon) => {
+    return pokemon.name.english.includes(searchValue);
+  });
 
-    const result = pokemons.filter((pokemon) => {
-      return pokemon.name.english.includes(searchValue);
-    });
-
+  const handleSearch = () => {
     setPokemonFilter(result);
+  };
+
+  useEffect(() => {
+    setPokemonFilter(result);
+  }, [pokemons]);
+
+  useEffect(() => {
+    if (searchValue.length === 0) {
+      setPokemonFilter(null);
+    }
+  }, []);
+
+  const dispatchChangeFavorite = (pokemon) => {
+    dispatch(changeFavorite(pokemon.id));
   };
 
   return (
@@ -73,79 +94,119 @@ export const Header = () => {
               borderColor="var(--chakra-colors-telegram-500)"
               type="search"
               placeholder="Pesquisar"
-              onChange={handleChange}
+              onChange={(e) => setSearchValue(e.target.value)}
               zIndex="9999"
             />
-            <Box
-              position="absolute"
-              top="45px"
-              w="100%"
-              right="0"
-              zIndex="9998"
-              maxW={600}
-              bg="#319795"
-              maxH={300}
-              overflowY="auto"
-              borderRadius={10}
-              shadow="md"
-              border="1px solid white"
-              color="white"
-            >
-              <Accordion allowMultiple>
-                {pokemonFilter && pokemonFilter.map((pokemon)=>{
-                  return(                    
-                    <AccordionItem key={pokemon.name.english}>
-                      <h2>
-                        <AccordionButton>
-                          <Box display="flex" flex="1" alignItems="center">
-                            {pokemon.name.english}
-                          </Box>
-                          <AccordionIcon />
-                        </AccordionButton>
-                      </h2>
-                      <AccordionPanel pb={4}>
-                        <Box display="flex" flexDirection="column">
-                          <Image w="100%" src={`${linkImagem}/${pokemon.id}.png`} />
-                        </Box>
-                                      <Box
-                      py={2}
-                      display={"flex"}
-                      alignItems={"center"}
-                      gap={2}
-                      justifyContent={"space-between"}
-                      p={2}
-                    >
-                      {pokemon.favorito ? (
-                        <AiFillHeart
-                          cursor="pointer"
-                          size={22}
-                          fill={"red"}
-                        />
-                      ) : (
-                        <AiOutlineHeart
-                          cursor="pointer"
-                          size={22}
-                          fill={"red"}
-                        />
-                      )}
-                      <Tag variant="solid" colorScheme="telegram" py={2}>
-                        <Text>
-                          <strong>R$</strong> {pokemon.price}
-                        </Text>
-                      </Tag>
-                      <Button>
-                        <MdAddShoppingCart
-                          size={20}
-                          fill="var(--chakra-colors-telegram-500)"
-                        />
-                      </Button>
-                    </Box>
-                      </AccordionPanel>
-                    </AccordionItem> 
-                  )
-                })}
-              </Accordion>
-            </Box>
+
+            {searchValue != "" ? (
+              <Box>
+                <Button
+                  onClick={handleSearch}
+                  colorScheme="teal"
+                  leftIcon={<AiOutlineSearch size={32} fill="white" />}
+                  ml={2}
+                >
+                  Buscar
+                </Button>
+                <Box
+                  position="absolute"
+                  top="45px"
+                  w="100%"
+                  right="0"
+                  zIndex="9998"
+                  maxW={600}
+                  bg="#319795"
+                  maxH={300}
+                  overflowY="auto"
+                  borderRadius={10}
+                  shadow="md"
+                  border="1px solid white"
+                  color="white"
+                >
+                  <Accordion allowMultiple>
+                    {pokemonFilter &&
+                      pokemonFilter.map((pokemon) => {
+                        return (
+                          <AccordionItem key={pokemon.name.english}>
+                            <h2>
+                              <AccordionButton>
+                                <Box
+                                  display="flex"
+                                  flex="1"
+                                  alignItems="center"
+                                >
+                                  {pokemon.name.english}
+                                </Box>
+                                <AccordionIcon />
+                              </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4}>
+                              <Box display="flex" flexDirection="column">
+                                <Image
+                                  w="100%"
+                                  src={`${linkImagem}/${pokemon.id}.png`}
+                                />
+                              </Box>
+                              <Box
+                                py={2}
+                                display={"flex"}
+                                alignItems={"center"}
+                                gap={2}
+                                justifyContent={"space-between"}
+                                p={2}
+                              >
+                                {pokemon.favorito ? (
+                                  <AiFillHeart
+                                    cursor="pointer"
+                                    size={26}
+                                    fill={"red"}
+                                    onClick={() =>
+                                      dispatchChangeFavorite(pokemon)
+                                    }
+                                  />
+                                ) : (
+                                  <AiOutlineHeart
+                                    cursor="pointer"
+                                    size={26}
+                                    fill={"red"}
+                                    onClick={() =>
+                                      dispatchChangeFavorite(pokemon)
+                                    }
+                                  />
+                                )}
+                                <Box display="flex" gap={2}>
+                                  <Tag
+                                    variant="solid"
+                                    colorScheme="telegram"
+                                    py={2}
+                                  >
+                                    <Text>
+                                      <strong>R$</strong> {pokemon.price}
+                                    </Text>
+                                  </Tag>
+                                  <Button>
+                                    <MdAddShoppingCart
+                                      size={20}
+                                      fill="var(--chakra-colors-telegram-500)"
+                                      onClick={() => {
+                                        setSearchValue("");
+                                        navigate("/carrinho");
+                                        dispatch(addPokemonToCard(pokemon));
+                                      }}
+                                    />
+                                  </Button>
+                                </Box>
+                              </Box>
+                            </AccordionPanel>
+                          </AccordionItem>
+                        );
+                      })}
+                  </Accordion>
+                </Box>
+              </Box>
+            ) : (
+              <></>
+            )}
           </InputGroup>
           <Link to={"/carrinho"}>
             <Button colorScheme="telegram">
