@@ -13,18 +13,20 @@ import {
   AccordionPanel,
   AccordionIcon,
   Tag,
+  Text,
 } from "@chakra-ui/react";
-import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import pokeStoreLogo from "../../assets/pokestore-logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { linkImagem } from "../../util/PokemonList";
+import { MdAddShoppingCart } from "react-icons/md";
 
 export const Header = () => {
   const location = useLocation();
   const pokemons = useSelector((state) => state.pokemons);
   const [searchValue, setSearchValue] = useState();
-  const [pokemonFilter, setPokemonFilter] = useState();
+  const [pokemonFilter, setPokemonFilter] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,90 +92,58 @@ export const Header = () => {
               color="white"
             >
               <Accordion allowMultiple>
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box display="flex" flex="1" alignItems="center">
-                        {/* <Image w={16} src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg" /> */}
-                        Charizard
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    <Box display="flex" flexDirection="column">
-                      <Image w="100%" src={`${linkImagem}/${6}.png`} />
+                {pokemonFilter && pokemonFilter.map((pokemon)=>{
+                  return(                    
+                    <AccordionItem key={pokemon.name.english}>
+                      <h2>
+                        <AccordionButton>
+                          <Box display="flex" flex="1" alignItems="center">
+                            {pokemon.name.english}
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4}>
+                        <Box display="flex" flexDirection="column">
+                          <Image w="100%" src={`${linkImagem}/${pokemon.id}.png`} />
+                        </Box>
+                                      <Box
+                      py={2}
+                      display={"flex"}
+                      alignItems={"center"}
+                      gap={2}
+                      justifyContent={"space-between"}
+                      p={2}
+                    >
+                      {pokemon.favorito ? (
+                        <AiFillHeart
+                          cursor="pointer"
+                          size={22}
+                          fill={"red"}
+                        />
+                      ) : (
+                        <AiOutlineHeart
+                          cursor="pointer"
+                          size={22}
+                          fill={"red"}
+                        />
+                      )}
+                      <Tag variant="solid" colorScheme="telegram" py={2}>
+                        <Text>
+                          <strong>R$</strong> {pokemon.price}
+                        </Text>
+                      </Tag>
+                      <Button>
+                        <MdAddShoppingCart
+                          size={20}
+                          fill="var(--chakra-colors-telegram-500)"
+                        />
+                      </Button>
                     </Box>
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Section 2 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
+                      </AccordionPanel>
+                    </AccordionItem> 
+                  )
+                })}
               </Accordion>
             </Box>
           </InputGroup>
