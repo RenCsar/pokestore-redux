@@ -32,7 +32,7 @@ import { addPokemonToCard } from "../../store/reducers/cartSlice";
 export const Header = () => {
   const location = useLocation();
   const pokemons = useSelector((state) => state.pokemons);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(null);
   const [pokemonFilter, setPokemonFilter] = useState();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export const Header = () => {
   }, [location]);
 
   const result = pokemons.filter((pokemon) => {
-    return pokemon.name.english.includes(searchValue);
+    return pokemon.name.english.toLowerCase().includes(searchValue);
   });
 
   const handleSearch = () => {
@@ -52,12 +52,6 @@ export const Header = () => {
   useEffect(() => {
     setPokemonFilter(result);
   }, [pokemons]);
-
-  useEffect(() => {
-    if (searchValue.length === 0) {
-      setPokemonFilter(null);
-    }
-  }, []);
 
   const dispatchChangeFavorite = (pokemon) => {
     dispatch(changeFavorite(pokemon.id));
@@ -94,7 +88,7 @@ export const Header = () => {
               borderColor="var(--chakra-colors-telegram-500)"
               type="search"
               placeholder="Pesquisar"
-              onChange={(e) => setSearchValue(e.target.value)}
+              onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
               zIndex="9999"
             />
 
@@ -116,14 +110,14 @@ export const Header = () => {
                   zIndex="9998"
                   maxW={600}
                   bg="#319795"
-                  maxH={300}
+                  maxH={350}
                   overflowY="auto"
                   borderRadius={10}
                   shadow="md"
                   border="1px solid white"
                   color="white"
                 >
-                  <Accordion allowMultiple>
+                  <Accordion>
                     {pokemonFilter &&
                       pokemonFilter.map((pokemon) => {
                         return (
@@ -140,41 +134,53 @@ export const Header = () => {
                                 <AccordionIcon />
                               </AccordionButton>
                             </h2>
-                            <AccordionPanel pb={4}>
-                              <Box display="flex" flexDirection="column">
+                            <AccordionPanel
+                              pb={4}
+                              display="flex"
+                              alignItems="center"
+                            >
+                              <Box display="flex">
                                 <Image
                                   w="100%"
+                                  maxW="200px"
                                   src={`${linkImagem}/${pokemon.id}.png`}
                                 />
                               </Box>
                               <Box
                                 py={2}
                                 display={"flex"}
+                                flexDir="column"
                                 alignItems={"center"}
                                 gap={2}
                                 justifyContent={"space-between"}
                                 p={2}
                               >
-                                {pokemon.favorito ? (
-                                  <AiFillHeart
+                                <Box display="flex" flexDir="column" gap={2}>
+                                  <Tag
                                     cursor="pointer"
-                                    size={26}
-                                    fill={"red"}
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    w="100%"
+                                    py={1}
                                     onClick={() =>
                                       dispatchChangeFavorite(pokemon)
                                     }
-                                  />
-                                ) : (
-                                  <AiOutlineHeart
-                                    cursor="pointer"
-                                    size={26}
-                                    fill={"red"}
-                                    onClick={() =>
-                                      dispatchChangeFavorite(pokemon)
-                                    }
-                                  />
-                                )}
-                                <Box display="flex" gap={2}>
+                                  >
+                                    {pokemon.favorito ? (
+                                      <AiFillHeart
+                                        cursor="pointer"
+                                        size={26}
+                                        fill={"red"}
+                                      />
+                                    ) : (
+                                      <AiOutlineHeart
+                                        cursor="pointer"
+                                        size={26}
+                                        fill={"red"}
+                                      />
+                                    )}
+                                  </Tag>
                                   <Tag
                                     variant="solid"
                                     colorScheme="telegram"
@@ -184,15 +190,16 @@ export const Header = () => {
                                       <strong>R$</strong> {pokemon.price}
                                     </Text>
                                   </Tag>
-                                  <Button>
+                                  <Button
+                                    onClick={() => {
+                                      setSearchValue("");
+                                      navigate("/carrinho");
+                                      dispatch(addPokemonToCard(pokemon));
+                                    }}
+                                  >
                                     <MdAddShoppingCart
                                       size={20}
                                       fill="var(--chakra-colors-telegram-500)"
-                                      onClick={() => {
-                                        setSearchValue("");
-                                        navigate("/carrinho");
-                                        dispatch(addPokemonToCard(pokemon));
-                                      }}
                                     />
                                   </Button>
                                 </Box>

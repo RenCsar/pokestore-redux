@@ -18,6 +18,7 @@ import {
 } from "../../store/reducers/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { changeFavorite } from "../../store/reducers/pokemonsSlice";
 
 export const CardShopping = ({ pokemon }) => {
   const [test, setTeste] = useState(pokemon);
@@ -29,7 +30,7 @@ export const CardShopping = ({ pokemon }) => {
 
   useEffect(() => {
     setTeste(filteredPokemon);
-    console.log(test)
+    console.log(test);
   }, [pokemonState]);
 
   return (
@@ -96,9 +97,23 @@ export const CardShopping = ({ pokemon }) => {
             </Tag>
             <Box display="flex" gap={3} alignItems="center">
               {test[0]?.favorito ? (
-                <AiFillHeart cursor="pointer" size={32} fill={"red"} />
+                <AiFillHeart
+                  cursor="pointer"
+                  size={32}
+                  fill={"red"}
+                  onClick={() => {
+                    dispatch(changeFavorite(pokemon.id));
+                  }}
+                />
               ) : (
-                <AiOutlineHeart cursor="pointer" size={32} fill={"red"} />
+                <AiOutlineHeart
+                  cursor="pointer"
+                  size={32}
+                  fill={"red"}
+                  onClick={() => {
+                    dispatch(changeFavorite(pokemon.id));
+                  }}
+                />
               )}
               <Button
                 colorScheme={pokemon.count == 0 ? `red` : `telegram`}
