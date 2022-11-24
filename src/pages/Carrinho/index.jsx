@@ -1,5 +1,5 @@
 import { Button, Card, CardBody, Container, Text } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { CardShopping } from "../../components/cardShopping";
@@ -12,6 +12,12 @@ export const Carrinho = () => {
   const values = cart.map((pokemon) => {
     return pokemon.price * pokemon.count;
   });
+
+  const [ buttonPointer, setButtonPointer] = useState(cart.length == 0? true: false);
+  
+  useEffect(()=>{
+    cart.length == 0? setButtonPointer(true) : setButtonPointer(false);
+  }, [cart])
 
   const subtotal = values.length > 0 ? values.reduce((soma, i) => soma + i) : 0;
 
@@ -49,6 +55,7 @@ export const Carrinho = () => {
           alignSelf="center"
           justifySelf="flex-end"
           mr="20px"
+          disabled={buttonPointer}
           onClick={()=> cart.length == 0? null : navigate('/recibo', {state: {
             subtotal: subtotal,
             cart: cart
