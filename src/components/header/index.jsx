@@ -14,6 +14,7 @@ import {
   AccordionIcon,
   Tag,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import {
   AiOutlineShoppingCart,
@@ -36,6 +37,7 @@ export const Header = () => {
   const [pokemonFilter, setPokemonFilter] = useState();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const toast = useToast();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,7 +48,22 @@ export const Header = () => {
   });
 
   const handleSearch = () => {
-    setPokemonFilter(result);
+    if (searchValue.toString().length <= 3) {
+      toast({
+        title: "Cuidado!",
+        position: "top-left",
+        description: "É necessário, no mínimo, 3 caracteres.",
+        status: "info",
+        duration: 4000,
+        isClosable: true,
+      });
+    } else {
+      setPokemonFilter(result);
+
+      if(!pokemonFilter)  {
+        console.log("não encontrado")
+      }
+    }
   };
 
   useEffect(() => {

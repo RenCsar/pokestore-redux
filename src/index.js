@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Router from "./util/Router"
 import "./global.styles.css";
+import "nprogress/nprogress.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
