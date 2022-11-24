@@ -49,10 +49,10 @@ export const Carrinho = () => {
           alignSelf="center"
           justifySelf="flex-end"
           mr="20px"
-          onClick={()=> navigate('/recibo', {state: {
+          onClick={()=> cart.length == 0? null : navigate('/recibo', {state: {
             subtotal: subtotal,
             cart: cart
-          }}) }
+          }}) }  
         >
           Finalizar Compra
         </Button>
